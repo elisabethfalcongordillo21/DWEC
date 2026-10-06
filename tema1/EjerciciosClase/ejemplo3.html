@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Actividades Propuestas</h1>
+
+    <p>Realiza la función suma, resta, multiplicación y división</p>
+
+    <p id="Suma"></p>
+    <p id="Resta"></p>
+    <p id="Multiplicación"></p>
+    <p id="División"></p>
+
+    <script>
+
+        function suma(a,b){
+            return a+b;
+        }
+
+        document.getElementById("Suma").textContent= "El resultado es: " + suma(10,5)
+        
+        function resta(a,b){
+            return a-b;
+        }
+        
+        document.getElementById("Resta").textContent= "El resultado es: " + resta(10,5)
+        
+        function mult(a,b){
+            return a*b;
+        }
+        
+        document.getElementById("Multiplicación").textContent= "El resultado es: " + mult(10,5)
+        
+        function div(a,b){
+            return a/b;
+        }
+        
+        document.getElementById("División").textContent= "El resultado es: " + div(10,5)
+        </script>
+
+</body>
+</html>
