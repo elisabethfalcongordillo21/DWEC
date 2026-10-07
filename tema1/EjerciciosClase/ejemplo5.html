@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tema 2 - Eventos con 'listener'</title>
+</head>
+<body>
+
+  <h2>Eventos con 'listener'</h2>
+
+  <!-- Ratón 1: onclick -->
+  <button id="btnClick">1. Hacer clic aquí</button>
+
+  <br><br>
+
+  <!-- Ratón 2: onmouseover -->
+  <div id="caja" style="background: #e2e8f0; padding: 10px; width: 250px;">
+    2. Pasa el ratón por encima de esta caja
+  </div>
+
+  <hr>
+
+  <!-- ========================================== -->
+  <!-- EVENTOS DE TEXTO / TECLADO                 -->
+  <!-- ========================================== -->
+
+  <!-- Texto 1: oninput (se activa mientras el usuario escribe) -->
+  <label>3. Escribe tu nombre :</label><br>
+  <input type="text" id="nombre">
+
+  <br><br>
+
+  <!-- Texto 2: onkeyup (se activa al soltar una tecla) -->
+  <label>4. Escribe un texto :</label><br>
+  <input type="text" id="texto">
+
+  <!-- Salida de texto en pantalla -->
+  <p id="salida"></p>
+
+  <script>
+  var salida = document.getElementById("salida");
+  var btnClick = document.getElementById("btnClick");
+  var caja = document.getElementById("caja");
+  var nombre = document.getElementById("nombre");
+  var texto = document.getElementById("texto");
+
+  // Funciones asociadas a los eventos de ratón
+  function alHacerClic() {
+    salida.innerText = "¡Has hecho clic en el botón!";
+  }
+
+  function alPasarElRaton() {
+    caja.innerText = "¡El ratón está sobre la caja!";
+  }
+
+  // Funciones asociadas a los eventos de texto
+  function alEscribirTexto() {
+    salida.innerText = "Nombre en tiempo real: " + nombre.value;
+  }
+
+  function alSoltarTecla() {
+    console.log("Número de caracteres (Consola F12): " + texto.value.length);
+  }
+
+  // Registro de eventos (sin el prefijo 'on')
+  btnClick.addEventListener("click", alHacerClic);
+  caja.addEventListener("mouseover", alPasarElRaton);
+  nombre.addEventListener("input", alEscribirTexto);
+  texto.addEventListener("keyup", alSoltarTecla);
+</script>
+
+</body>
+</html>
