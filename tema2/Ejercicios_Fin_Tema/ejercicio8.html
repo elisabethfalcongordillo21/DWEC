@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 8 - Mes y año de una fecha</title>
 </head>
 <body>
-    
+    <h1>Ejercicio 8: mes y año de una fecha</h1>
+<div id="resultado"></div>
+ 
+<script>
+ 
+  var fecha = new Date(2026, 9, 14);
+ 
+  var anio = fecha.getFullYear();
+  var mes = fecha.getMonth() + 1;     
+ 
+  document.getElementById("resultado").innerHTML =
+    "Fecha: 14/10/2026<br>" +
+    "Mes: " + mes + "<br>" +
+    "Año: " + anio;
+</script>
 </body>
 </html>

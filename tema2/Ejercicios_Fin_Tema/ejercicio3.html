@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 3 - Suma y concatenación</title>
 </head>
 <body>
-    
+<h1>Ejercicio 3: + con números y texto</h1>
+<div id="resultado"></div>
+ 
+<script>
+  var dato1 = "Ronaldo " + 5 + 5;
+  var dato2 = 5 + 5 + " Ronaldo ";
+ 
+  var texto = "";
+  texto = texto + 'Línea 1: "Ronaldo " + 5 + 5 = <b>' + dato1 + "</b><br>";
+  texto = texto + 'Línea 2: 5 + 5 + " Ronaldo " = <b>' + dato2 + "</b><br><br>";
+ 
+  texto = texto + "<b>Explicación:</b><br>";
+  texto = texto + "- JavaScript lee de izquierda a derecha. Si en algún momento se junta un TEXTO con un número, el + deja de sumar y pega (concatena).<br>";
+  texto = texto + '- Línea 1: "Ronaldo " + 5 ya es texto ("Ronaldo 5"), y luego + 5 pega otro 5: "Ronaldo 55".<br>';
+  texto = texto + '- Línea 2: 5 + 5 son dos números, así que primero suma (10). Después 10 + texto pega: "10 Ronaldo ".';
+ 
+  document.getElementById("resultado").innerHTML = texto;
+</script>
 </body>
 </html>
