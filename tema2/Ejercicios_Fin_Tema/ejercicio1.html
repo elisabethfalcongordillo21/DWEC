@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1- Circunferencia</title>
+</head>
+<body>
+
+<h1>Ejercicio 1: circunferencia de radio 5</h1>
+<div id="resultado"></div>
+
+<script>
+  var radio = 5;
+  var area = Math.PI * radio * radio;       
+  var longitud = 2 * Math.PI * radio;      
+
+  document.getElementById("resultado").innerHTML =
+    "Radio: " + radio + "<br>" +
+    "Área: " + area.toFixed(2) + "<br>" +
+    "Longitud: " + longitud.toFixed(2);
+</script>
+</body>
+</html>

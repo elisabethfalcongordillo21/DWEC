@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Operador ternario</title>
+</head>
+<body>
+    <h1>Ejercicio 2: operador ternario</h1>
+ 
+<div>
+  <p>El operador ternario es un if / else escrito en una sola línea:</p>
+  <p><b>condición ? valor_si_es_verdadera : valor_si_es_falsa</b></p>
+</div>
+ 
+<div>
+  Escribe tu edad: <input type="number" id="edad">
+  <button onclick="comprobar()">Comprobar</button>
+  <p id="resultado"></p>
+</div>
+ 
+<script>
+  function comprobar() {
+    var edad = Number(document.getElementById("edad").value);
+ 
+    var mensaje = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+
+    document.getElementById("resultado").innerHTML = mensaje;
+  }
+</script>
+</body>
+</html>
