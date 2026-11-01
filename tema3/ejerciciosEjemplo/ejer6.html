@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../estilos.css">
+</head>
+<body>
+    <script>
+        function anadirTarea(texto) {
+  
+            const guardado = localStorage.getItem("tareas");
+
+            let tareas = [];
+            if (guardado !== null) {
+                tareas = JSON.parse(guardado);
+            }
+
+            tareas.push(texto);
+
+            localStorage.setItem("tareas", JSON.stringify(tareas));
+        }
+
+        function verTareas() {
+            const guardado = localStorage.getItem("tareas");
+
+            if (guardado === null) {
+                console.log("No hay tareas");
+                return;
+            }
+
+            const tareas = JSON.parse(guardado);
+            for (let i = 0; i < tareas.length; i++) {
+                console.log((i + 1) + ". " + tareas[i]);
+            }
+        }
+
+        anadirTarea("Hacer los ejercicios de DWEC");
+        anadirTarea("Estudiar para el examen");
+        verTareas();
+
+    </script>
+    <p>Este ejercicio muestra el resultado en la consola (F12).</p>
+    <p><a class="volver" href="../tema3.html">Volver al índice</a></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../estilos.css">
+</head>
+<body>
+    <script>
+        
+        document.cookie = "idioma=es; max-age=" + (7 * 24 * 3600) + "; path=/";
+
+        function leerCookie(nombre) {
+            const pares = document.cookie.split("; ");
+                for (let i = 0; i < pares.length; i++) {
+                    const partes = pares[i].split("=");
+                        if (partes[0] === nombre) return decodeURIComponent(partes[1]);
+                    }
+            return null;
+        }
+
+        console.log(leerCookie("idioma")); 
+
+        document.cookie = "idioma=; max-age=0; path=/";
+
+        console.log(leerCookie("idioma")); 
+    </script>
+    <p>Este ejercicio muestra el resultado en la consola (F12).</p>
+    <p><a class="volver" href="../tema3.html">Volver al índice</a></p>
+</body>
+</html>
