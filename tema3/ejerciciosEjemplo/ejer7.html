@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../estilos.css">
+
+</head>
+<body>
+    <script>
+        const libro = {
+            titulo: "Dune",
+            autor: "Frank Herbert",
+            paginas: 688,
+            resumen: function () {
+                return this.titulo + ", de " + this.autor + " (" + this.paginas + " páginas)";
+            }
+        };
+
+        console.log(libro.resumen());
+
+        for (let clave in libro) {
+            console.log(clave + ": " + libro[clave]);
+        }
+    </script>
+</body>
+</html>
